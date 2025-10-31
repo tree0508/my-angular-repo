@@ -10,7 +10,7 @@ phases:
       - npm install
   build:
     commands:
-      - echo Build -c production
+      - ng Build -c production
       - echo "Build completed."
     finally:
       - echo This is the finally block execution!
