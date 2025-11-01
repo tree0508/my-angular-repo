@@ -12,11 +12,12 @@ phases:
     commands:
       - ng build -c production
       - echo "Build completed."
+      - echo "ls -R dist/my-angular-project"
     finally:
       - echo This is the finally block execution!
-artifacts: 
-  base-directory: dist/my-angular-project
+artifacts:
+  base-directory: .
   files:
     - 'dist/my-angular-project/**/*'
-    - appspec.yml
+    - 'appspec.yml'
     - 'deploy-scripts/**/*'
