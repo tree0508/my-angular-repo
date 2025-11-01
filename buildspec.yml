@@ -17,6 +17,11 @@ phases:
 artifacts:
   base-directory: dist/my-angular-project
   files:
-    - 'dist/my-angular-project/**/*'
-    - appspec.yml
-    - 'deploy-scripts/**/*'
+    - '**/*'
+  discard-paths: no # 필요시 상대경로 유지
+
+secondary-artifacts:
+  appspec:
+    files:
+      - appspec.yml
+      - deploy-scripts/**/*
